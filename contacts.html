@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Hotel Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="index.html">
+                        <i class="fas fa-hotel me-2"></i>HotelBooking
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#hotels">Отели</a>
+                            </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="deals.html">Акции</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contacts.html">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contacts Section -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1><i class="fas fa-address-book me-2"></i>Контакты</h1>
+                <p class="lead">Свяжитесь с нами любым удобным способом</p>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-map-marker-alt text-primary me-2"></i>Наш офис</h3>
+                        <p class="card-text">
+                            <strong>Адрес:</strong> г. Москва, ул. Тверская, д. 15, офис 304<br>
+                            <strong>Время работы:</strong> Пн-Пт: 9:00-18:00, Сб: 10:00-16:00
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary"><i class="fas fa-phone me-2"></i>Телефон</h4>
+                                <p class="card-text">
+                                    <strong>Горячая линия:</strong><br>
+                                    <a href="tel:+74951234567" class="text-decoration-none">+7 (495) 123-45-67</a><br>
+                                    <strong>WhatsApp:</strong><br>
+                                    <a href="https://wa.me/74951234567" class="text-decoration-none">+7 (495) 123-45-67</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary"><i class="fas fa-envelope me-2"></i>Email</h4>
+                                <p class="card-text">
+                                    <strong>Общие вопросы:</strong><br>
+                                    <a href="mailto:info@hotelbooking.ru" class="text-decoration-none">info@hotelbooking.ru</a><br>
+                                    <strong>Поддержка:</strong><br>
+                                    <a href="mailto:support@hotelbooking.ru" class="text-decoration-none">support@hotelbooking.ru</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-comments text-primary me-2"></i>Онлайн чат</h3>
+                        <p class="card-text">
+                            Наш менеджер онлайн и готов ответить на все ваши вопросы!
+                        </p>
+                        <button class="btn btn-primary" onclick="alert('Чат временно недоступен. Пожалуйста, свяжитесь с нами по телефону.')">
+                            <i class="fas fa-comment me-1"></i> Начать чат
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-paper-plane me-2"></i>Написать нам</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="contact-name" class="form-label">Ваше имя</label>
+                                <input type="text" class="form-control" id="contact-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contact-email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-subject" class="form-label">Тема</label>
+                                <select class="form-select" id="contact-subject">
+                                    <option>Бронирование</option>
+                                    <option>Вопрос по отелю</option>
+                                    <option>Техническая поддержка</option>
+                                    <option>Предложение сотрудничества</option>
+                                    <option>Другое</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact-message" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="contact-message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">
+                                <i class="fas fa-paper-plane me-1"></i> Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="container py-4">
+        <h2 class="mb-4"><i class="fas fa-map-marked-alt me-2"></i>Как нас найти</h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.695941836444!2d37.61739931572265!3d55.75582608055715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b30cb179%3A0x6be50652e86be1d2!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1634567890123!5m2!1sru!2sru" 
+                    allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-hotel me-2"></i>HotelBooking</h5>
+                    <p class="text-muted">Лучший сервис бронирования отелей</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted">&copy; 2024 HotelBooking. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Обработка формы контактов
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
